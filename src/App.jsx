@@ -56,7 +56,7 @@ class App extends React.Component{
     {album:"The Black Parade", artist:"My Chemical Romance", year:2006, decade:"2000", genre:"rock", numsongs:14, count:0, imagesrc:BlackParade, alt:"the black parade album cover, features marching skeleton mannequin"},
     {album:"The Fame Monster", artist:"Lady Gaga", year:2009, decade:"2000", genre:"pop", numsongs:23, count:0, imagesrc:FameMon, alt:"the fame monster album cover, features lady gaga in all black"},
     {album:"The Misconceptions of Us", artist:"Shinee", year:2013, decade:"2010", genre:"kpop", numsongs:20, count:0, imagesrc:Misconceptions, alt:"the misconceptions of us album cover, features abstract art face"},
-    {album:"Wings", artist:"BTS", year:2016, decade:"2010", genre:"kpop", numsongs:15, count:0, imagesrc:Wings},
+    {album:"Wings", artist:"BTS", year:2016, decade:"2010", genre:"kpop", numsongs:15, count:0, imagesrc:Wings, alt:"wings album cover, features four patterned circles on white backdrop and album title in black"},
   ];
   
   //calculation method for price aggregator - iterates through a list and increments value, and sets state to send to Cart component
