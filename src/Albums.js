@@ -10,6 +10,9 @@ class Albums extends React.Component{
         this.state = {};
     }
 
+    //css styling for rendered items
+
+    //styling for the "add to cart" button
     buttonstyle = {
         background: 'linear-gradient(45deg, #E671A4, #8E34B2, #2F69AC)',
         size: "small",
@@ -19,16 +22,19 @@ class Albums extends React.Component{
         margin:"0.5vw",
     };
 
+    //sets the location of the button div
     buttdivstyle = {
         justifyContent: 'center'
     };
 
+    //styling for individual card items
     cardstyle={
         width:"20vw",
         variant:"outlined",
         margin:"2vw"
     };
 
+    //styling for the div containing all of the cards
     divstyle={
         display: "flex",
         flexDirection: "row",
@@ -40,6 +46,7 @@ class Albums extends React.Component{
 
     }
 
+    // obtains information from items in recordslist and formats them in the cards 
     createCard = item =>{
         return(
             <Card style={this.cardstyle}  align="center">
@@ -51,7 +58,10 @@ class Albums extends React.Component{
                     <Typography component="p">Year of release: {item.year}</Typography>
                     <Typography component="p">Genre: {item.genre}</Typography>
                     <Typography component="p">Number of songs: {item.numsongs}</Typography>
+                    {/* Purchase price determined by small calculations - 0.69 per song */}
                     <Typography component="p">Purchase price: ${(item.numsongs * 0.69).toFixed(2)}</Typography>
+                    {/* separate div for button to allow for adding more buttons in the div, 
+                     button links to function defined in App component */}
                     <div style={this.buttdivstyle}>
                         <Button value={item.album} style={this.buttonstyle} onClick={() => this.props.addToCart(item.album)}><AddIcon/>Add To Cart</Button>
                     </div>
@@ -61,12 +71,10 @@ class Albums extends React.Component{
     };
 
     render(){
-        //const img = require.context('/images', true);
         const albumCards = this.props.list.map(this.createCard);
         return <div style={this.divstyle}>{albumCards}</div>;
     }
 }
 
-// <CardMedia  className="Img" component="img" style={{height: 0, paddingTop: '56.25%'}} src={require(item.imagesrc)}/>
 
 export default Albums;

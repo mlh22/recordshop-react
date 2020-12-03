@@ -1,4 +1,5 @@
 /* monoton-regular - latin */
+/* adds the font for the title of the website */
 @font-face {
   font-family: 'Monoton';
   font-style: normal;
@@ -26,6 +27,7 @@ code {
     monospace;
 }
 
+/* title - css settings */
 .title {
   font-family: "Monoton", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

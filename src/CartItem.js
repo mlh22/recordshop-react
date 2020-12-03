@@ -10,11 +10,13 @@ class CartItem extends React.Component{
         this.state = {};
     }
 
-    cartitemstyle = {
+    //styles the div object controlling display of all cards
+    cartitemsstyle = {
         display: "flex",
         flexDirection: "column",
     }
 
+    //styling for individual card and elements inside it
     cardstyle={
         width:"70vw",
         margin:"2vw",
@@ -22,6 +24,7 @@ class CartItem extends React.Component{
         flexDirection: "row",
     };
 
+    //styling for the "remove from cart" button
     buttonstyle = {
         background: 'linear-gradient(45deg, #E671A4, #8E34B2, #2F69AC)',
         size: "small",
@@ -31,11 +34,13 @@ class CartItem extends React.Component{
         margin:"0.5vw",
     };
 
+    //styling for image div, allowing for placement on the card
     imagestyle = {
         float:"left",
         width:"25vw",
     }
 
+    //styling for div containing text and buttons, allowing for placement on the card
     infostyle = {
         float:"right",
         width:"45vw",
@@ -44,6 +49,7 @@ class CartItem extends React.Component{
         verticalAlign:"center",
     }
 
+    //sets ratios and sizes for images within the div in the card
     cardmediastyle = {
         display:"inline-block",
         verticalAlign:"center",
@@ -52,7 +58,7 @@ class CartItem extends React.Component{
         paddingTop: '80%',
     }
 
-
+    //creates cards by mapping information in an object in the shopping list and styling them accordingly
     createCartItems = item => {
         return(
             <Card align="center" style={this.cardstyle}>
@@ -64,9 +70,11 @@ class CartItem extends React.Component{
                         <Typography variant="h4">{item.album}</Typography>
                         
                         <Typography component="p">Artist: {item.artist}</Typography>
+                        {/* Purchase price determined by small calculations - 0.69 per song */}
                         <Typography component="p">Price per album: ${(item.numsongs * 0.69).toFixed(2)}</Typography>
                         <br />
                         <Typography component="p">Amount in Cart: {item.count}</Typography>
+                        {/* Buttons link to functions defined in App component */}
                         <IconButton value={item.album} aria-label="add" onClick={() => this.props.oneMoreAlbum(item.album)}><AddIcon /></IconButton>
                         <IconButton value={item.album} aria-label="remove" onClick={() => this.props.oneLessAlbum(item.album)}><RemoveIcon /></IconButton>
                         <br />
@@ -79,7 +87,7 @@ class CartItem extends React.Component{
 
     render(){
         const cartCards = this.props.shoppingList.map(this.createCartItems);
-        return <div style={this.cartitemstyle} bgcolor="primary">{cartCards} </div>;
+        return <div style={this.cartitemsstyle} bgcolor="primary">{cartCards} </div>;
     }
 }
 
