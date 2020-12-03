@@ -50,7 +50,7 @@ class Albums extends React.Component{
     createCard = item =>{
         return(
             <Card style={this.cardstyle}  align="center">
-                <CardMedia  className="Img" component="img" style={{height: 200}} src={item.imagesrc}/>
+                <CardMedia  className="Img" component="img" style={{height: 200}} src={item.imagesrc} alt={item.alt}/>
                 <CardContent>
                     <Typography variant="h4">{item.album}</Typography>
                     

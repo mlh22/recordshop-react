@@ -45,17 +45,17 @@ class App extends React.Component{
 
   //constant recordslist defines products available for purchase
   recordslist = [
-    {album:"A Night at the Opera", artist:"Queen", year:1975, decade:"19-anything", genre:"rock", numsongs:12, count:0, imagesrc:Nightopera},
-    {album:"Dystopia: The Tree of Language", artist:"Dreamcatcher", year:2020, decade:"2020", genre:"kpop", numsongs:13, count:0, imagesrc:Dystopia},
-    {album:"Nevermind", artist:"Nirvana", year:1991, decade:"19-anything", genre:"rock", numsongs:13, count:0, imagesrc:Nevermind},
-    {album:"positions", artist:"Ariana Grande", year:2020, decade:"2020", genre:"pop", numsongs:14, count:0, imagesrc:Positions},
-    {album:"reality in BLACK", artist:"Mamamoo", year:2019, decade:"2010", genre:"kpop", numsongs:11, count:0, imagesrc:Reality},
-    {album:"Red", artist:"Taylor Swift", year:2012, decade:"2010", genre:"pop", numsongs:16, count:0, imagesrc:Red},
-    {album:"Riot!", artist:"Paramore", year:2007, decade:"2000", genre:"rock", numsongs:12, count:0, imagesrc:Riot},
-    {album:"Sgt. Pepper's Lonely Hearts Club Band", artist:"The Beatles", year:1967, decade:"19-anything", genre:"pop", numsongs:13, count:0, imagesrc:SgtPepper},
-    {album:"The Black Parade", artist:"My Chemical Romance", year:2006, decade:"2000", genre:"rock", numsongs:14, count:0, imagesrc:BlackParade},
-    {album:"The Fame Monster", artist:"Lady Gaga", year:2009, decade:"2000", genre:"pop", numsongs:23, count:0, imagesrc:FameMon},
-    {album:"The Misconceptions of Us", artist:"Shinee", year:2013, decade:"2010", genre:"kpop", numsongs:20, count:0, imagesrc:Misconceptions},
+    {album:"A Night at the Opera", artist:"Queen", year:1975, decade:"19-anything", genre:"rock", numsongs:12, count:0, imagesrc:Nightopera, alt:"a night at the opera album cover, features cursive blue lettering under a colorful theater set piece"},
+    {album:"Dystopia: The Tree of Language", artist:"Dreamcatcher", year:2020, decade:"2020", genre:"kpop", numsongs:13, count:0, imagesrc:Dystopia, alt:"dystopia: the tree of language album cover, features white tree logo with olive green background and branches"},
+    {album:"Nevermind", artist:"Nirvana", year:1991, decade:"19-anything", genre:"rock", numsongs:13, count:0, imagesrc:Nevermind, alt:"nevermind album cover, depicts naked baby swimming for a dollar bill"},
+    {album:"positions", artist:"Ariana Grande", year:2020, decade:"2020", genre:"pop", numsongs:14, count:0, imagesrc:Positions, alt:"positions album cover, features desaturated ariana grande touching her lips"},
+    {album:"reality in BLACK", artist:"Mamamoo", year:2019, decade:"2010", genre:"kpop", numsongs:11, count:0, imagesrc:Reality, alt:"reality in black album cover, features all black with two overlaid white fours"},
+    {album:"Red", artist:"Taylor Swift", year:2012, decade:"2010", genre:"pop", numsongs:16, count:0, imagesrc:Red, alt:"red album cover, features taylor swift with her head down"},
+    {album:"Riot!", artist:"Paramore", year:2007, decade:"2000", genre:"rock", numsongs:12, count:0, imagesrc:Riot, alt:"riot album cover, features multiple scribbles of the word riot"},
+    {album:"Sgt. Pepper's Lonely Hearts Club Band", artist:"The Beatles", year:1967, decade:"19-anything", genre:"pop", numsongs:13, count:0, imagesrc:SgtPepper, alt:"sergeant pepper's lonely hearts club band album cover, features the beatles in colorful marching band garb"},
+    {album:"The Black Parade", artist:"My Chemical Romance", year:2006, decade:"2000", genre:"rock", numsongs:14, count:0, imagesrc:BlackParade, alt:"the black parade album cover, features marching skeleton mannequin"},
+    {album:"The Fame Monster", artist:"Lady Gaga", year:2009, decade:"2000", genre:"pop", numsongs:23, count:0, imagesrc:FameMon, alt:"the fame monster album cover, features lady gaga in all black"},
+    {album:"The Misconceptions of Us", artist:"Shinee", year:2013, decade:"2010", genre:"kpop", numsongs:20, count:0, imagesrc:Misconceptions, alt:"the misconceptions of us album cover, features abstract art face"},
     {album:"Wings", artist:"BTS", year:2016, decade:"2010", genre:"kpop", numsongs:15, count:0, imagesrc:Wings},
   ];
   
