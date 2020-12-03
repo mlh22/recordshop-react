@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+#root > div > Typography {
+  display: inline-block;
+  width: 30vw;
+  align-items: center;
+  justify-content: center;
+  padding: 1vw;
+}

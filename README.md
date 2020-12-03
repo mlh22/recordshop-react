@@ -1,3 +1,30 @@
+RECORD SHOP - README SPECIFICATIONS
+
+Welcome to React Retro Record shop - otherwise known as RR Record Shop. We have a wide (12) selection of
+albums of all (3) different genres from a multitude (4) of decades. Our unique cart function keeps track not 
+just of price, but also of the number of album copies and the number of songs you are purchasing. 
+
+Now an essay going into code specifications...
+
+The App.jsx component handles the rendering of all materials on the app. The App component holds the states and all functions 
+that alter the states. More specifically, these functions pertain to adding to and removing from the cart aggregator.
+For product list display, I declared a constant "recordslist" containing all albums in the shop. The App component passes this 
+list to the FilteredList component.
+
+FilteredList applies all methods of filtering to the product list. The prop "addToCart" was passed to this component so that 
+users can add items to the aggregator from the list of products. FilteredList defines its own states pertaining to sort and 
+filter methods. These methods are determined via assigning values to dropdown menu items to change the state in this component. 
+After filtering is complete, FilteredList sends the addToCart method, information about the sort methods, and the filtered 
+products list to SortedList. SortedList then sends the product list to the class Albums, which renders the list of albums as individual cards containing its information, price, and images.
+
+The Cart receives a large multitude of properties from the App class. Firstly, the states that are changed in the App component 
+are sent to the Cart component: the shopping list, the total price, and the total number of songs. Cart also receives the 
+specific cart methods defined in App - removeFromCart, oneMoreAlbum, and oneLessAlbum. Cart essentially creates a div container 
+to hold all of the cards pertaining to items in the shopping list. It renders the price and number of songs on its own, and 
+sends the other properties to CartAlbum, which renders the list of cards as well as buttons to control adding and removing 
+albums and copies of albums. The buttons have onClick actions which call the methods defined in the App component, and changes 
+to the shopping list and album quantities are immediately reflected in the aggregation of price, albums, and songs.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,0 +1,7 @@
+#root > div > div {
+    width: 30vw;
+    display: "inline-block";
+    align-items: "center";
+    justify-content: "center";
+    padding: 1vw;
+}

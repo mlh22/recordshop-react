@@ -1,3 +1,17 @@
+/* monoton-regular - latin */
+@font-face {
+  font-family: 'Monoton';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/monoton-v10-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('./fonts/monoton-v10-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/monoton-v10-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/monoton-v10-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/monoton-v10-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/monoton-v10-latin-regular.svg#Monoton') format('svg'); /* Legacy iOS */
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +24,14 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.title {
+  font-family: "Monoton", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  font-size: 7vw;
+  font-weight: 300;
+  margin: 0px;
+  overflow: hidden;
 }
