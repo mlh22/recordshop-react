@@ -63,7 +63,7 @@ class CartItem extends React.Component{
         return(
             <Card align="center" style={this.cardstyle}>
                 <div style={this.imagestyle}>
-                    <CardMedia style={this.cardmediastyle} image={item.imagesrc} title={item.album} />
+                    <CardMedia style={this.cardmediastyle} image={item.imagesrc} alt={item.alt} title={item.album} />
                 </div>
                 <div style={this.infostyle}>
                     <CardContent align="center">
